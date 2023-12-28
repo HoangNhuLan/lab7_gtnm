@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+Victory HTML CSS Template
+https://templatemo.com/tm-507-victory
+-->
+        <title>Làng ẩm thực</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">Làng ẩm thực</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="menu.html">Thực đơn</a></li>
+                        <li><a href="blog.html">Đánh giá</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h4>Ở nơi đây có thể giúp bạn tìm được món ăn ngon</h4>
+                    <h2>ẨM THỰC VIỆT NAM</h2>
+                    <p>Chào mừng bạn đến với website! Mong website này có thể giúp bạn lựa chọn món ăn một cách dễ dàng hơn!</p>
+                    <div class="primary-button">
+                        <a href="#" class="scroll-link" data-id="book-table">Đặt bàn tại đây</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div>
+        <span style="color: orangered;" class="tooltip" data-tooltip="Mô tả ngắn về mục này">Hãy click vào để được hướng dẫn</span>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var tooltips = document.querySelectorAll('.tooltip');
+
+    tooltips.forEach(function(tooltip) {
+        tooltip.addEventListener('mousemove', function(e) {
+            var tooltipContent = this.getAttribute('data-tooltip');
+            var tooltipElement = this.querySelector(':before');
+
+            tooltipElement.style.top = e.clientY + 10 + 'px';
+            tooltipElement.style.left = e.clientX + 10 + 'px';
+            tooltipElement.textContent = tooltipContent;
+        });
+
+        tooltip.addEventListener('mouseout', function() {
+            var tooltipElement = this.querySelector(':before');
+            tooltipElement.style.visibility = 'hidden';
+        });
+    });
+});
+function scrollToID(id, speed) {
+    var offSet = 0;
+    var targetOffset = $(id).offset().top - offSet;
+    $('html, body').animate({ scrollTop: targetOffset }, speed);
+}
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+    </div>
+
+
+
+    <section class="cook-delecious">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="first-image">
+                        <img src="img/anhgioithieu.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="cook-content">
+                        <h4>Chúng tôi nấu những món ăn ngon</h4>
+                        <div class="contact-content">
+                            <span>Bạn có thể gọi qua SĐT:</span>
+                            <h6>+ 1234 567 8910</h6>
+                        </div>
+                        <span>hoặc</span>
+                        <div class="primary-white-button">
+                            <a href="#" class="scroll-link" data-id="book-table">Đặt bàn tại đây!</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="second-image">
+                        <img src="img/anhgioithieu2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="menu.html">
+                        <img style="height: 18em;" src="img/pho.png" alt="Breakfast">
+                        <h4>Bữa sáng</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="menu.html">
+                        <img style="height: 18em;" src="img/com.png" alt="Lunch">
+                        <h4>Bữa trưa</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="menu.html">
+                        <img style="height: 18em;" src="img/comlam.png" alt="Dinner">
+                        <h4>Bữa tối</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <a href="menu.html">
+                        <img style="height: 18em;" src="img/suongsaocotdua.png" alt="Desserts">
+                        <h4>Tráng miệng</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="book-table">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Đặt bàn ngay bây giờ</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-2 col-sm-12">
+                    <div class="left-image">
+                        <img src="img/book_left_image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="right-info">
+                        <h4>Đơn đặt chỗ</h4>
+                        <form id="form-submit" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required name='day' onchange='this.form'>
+                                            <option value="">Chọn thứ</option>
+                                            <option value="Monday">Thứ hai</option>
+                                            <option value="Tuesday">Thứ ba</option>
+                                            <option value="Wednesday">Thứ tư</option>
+                                            <option value="Thursday">Thứ năm</option>
+                                            <option value="Friday">Thứ sáu</option>
+                                            <option value="Saturday">Thứ bảy</option>
+                                            <option value="Sunday">Chủ nhật</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required name='hour' onchange='this.form'>
+                                            <option value="">Chọn giờ</option>
+                                            <option value="10-00">10:00</option>
+                                            <option value="12-00">12:00</option>
+                                            <option value="14-00">14:00</option>
+                                            <option value="16-00">16:00</option>
+                                            <option value="18-00">18:00</option>
+                                            <option value="20-00">20:00</option>
+                                            <option value="22-00">22:00</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="name" class="form-control" id="name" placeholder="Họ và tên" required="">
+                                    </fieldset> 
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="phone" type="phone" class="form-control" id="phone" placeholder="Số điện thoại" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required class="person" name='persons' onchange='this.form'>
+                                            <option value="">Số lượng người</option>
+                                            <option value="1-Person">1 người</option>
+                                            <option value="2-Persons">2 người</option>
+                                            <option value="3-Persons">3 người</option>
+                                            <option value="4-Persons">4 người</option>
+                                            <option value="5-Persons">5 người</option>
+                                            <option value="6-Persons">6 người</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Đặt bàn</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+
+    <section class="featured-food">
+        <div class="container">
+            <div class="row">
+                <div class="heading">
+                    <h2>Món đặc trưng trong tuần </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Bữa sáng</h2>
+                        <img src="img/bunbo.png" alt="">
+                        <div class="price">35.000đ</div>
+                        <div class="text-content">
+                            <h4>Bún bò huế</h4>
+                            <p>“Linh hồn” của món bún bò xứ Huế chính là nước dùng. Nước dùng được ninh từ xương ống bò nên có vị ngọt đậm đà. Ngoài ra, còn thêm vào nước dùng chút mắm ruốc và sả để dậy mùi thơm nồng hấp dẫn.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Bữa trưa</h2>
+                        <img src="img/thitkhotau.png" alt="">
+                        <div class="price">70.000đ</div>
+                        <div class="text-content">
+                            <h4>Thịt kho tàu & cơm trắng</h4>
+                            <p>Vị đặc biệt của thịt kho tàu thường đến từ nước dừa, một nguyên liệu phong phú và dồi dào ở vùng Nam Bộ. Nước dừa làm cho món thịt trở nên thanh mát, đậm đà, và có hương vị riêng biệt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-item">
+                        <h2>Bữa tối</h2>
+                        <img src="img/laucuadong.png" alt="">
+                        <div class="price">250.000đ</div>
+                        <div class="text-content">
+                            <h4>Lẩu cua đồng</h4>
+                            <p>Lẩu cua đồng mang vị ngọt thanh, béo ngậy từ rạch cua của cua đồng dân dã, nước dùng đậm đà, các loại rau mát lành. Tất cả đã tạo nên một món lẩu cua đồng dân dã, mộc mạc mà khó quên.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="our-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Đánh giá</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img style="height: 17.5em;" src="img/besua.png" alt="">
+                        <div class="date">120.000đ</div>
+                        <div class="right-content">
+                            <h4>Bẹ sữa heo ướp chao</h4>
+                            <span>Đồ nướng</span>
+                            <p>Có rất nhiều cách thưởng thức món thịt vú heo nướng chao này, có khi ăn không, có khi ăn cùng bánh hỏi, với bún,… hoặc cuốn với các loại bánh tráng</p>
+                            <div class="text-button">
+                                <a href="blog.html">Cho đánh giá</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img style="height: 17.5em;" src="img/nemcuabe.png" alt="">
+                        <div class="date">150.000đ</div>
+                        <div class="right-content">
+                            <h4>Nem cua bể</h4>
+                            <span>Đồ chiên</span>
+                            <p>Bên ngoài Nem cua bể khoác lên mình sắc áo vàng ruộm trông cực bắt mắt. Khi ăn vào sẽ cảm nhận rõ nét hương vị của nhiều loại nguyên liệu cùng kết hợp.</p>
+                            <div class="text-button">
+                                <a href="blog.html">Cho đánh giá</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img style="height: 17.5em;" src="img/luonngong.png" alt="">
+                        <div class="date">220.000đ</div>
+                        <div class="right-content">
+                            <h4>Lườn ngỗng hun khói</h4>
+                            <span>Hun khói</span>
+                            <p>Lườn ngỗng là một loại thực phẩm có giá trị dinh dưỡng cao. Nó chứa nhiều protein, vitamin B6, selen, riboflavin và niacin.</p>
+                            <div class="text-button">
+                                <a href="blog.html">Cho đánh giá</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-post">
+                        <img style="height: 17.5em;" src="img/comnamkho.png" alt="">
+                        <div class="date">290.000đ</div>
+                        <div class="right-content">
+                            <h4>Cơm nắm khô cá dứa</h4>
+                            <span>Đồ chiên</span>
+                            <p>Thú vị ở chỗ giòn giòn của lớp cơm cháy nhưng lại dẻo ở lớp bên trong. Thêm một miếng khô cá dứa mặn mà ăn kèm, chậm rãi thưởng thức thì thật khó diễn tả nổi.</p>
+                            <div class="text-button">
+                                <a href="blog.html">Cho đánh giá</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="sign-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Đăng kí để nhận thông báo mới nhất của chúng tôi </h2>
+                    </div>
+                </div>
+            </div>
+            <form id="contact" action="" method="get">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3">
+                        <fieldset>
+                            <input name="email" type="text" class="form-control" id="email" placeholder="Nhập email của bạn.." required="">
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <fieldset>
+                            <button type="submit" id="form-submit" class="btn">Gửi</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2023 GIAO TIEP NGUOI MAY</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons">
+                        <li><a rel="nofollow" href= https://www.facebook.com/bbyyshark.24><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://github.com/HoangNhuLan"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/ecihyav/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.google.com/intl/vi/gmail/about/"><i class="fa-solid fa-envelope"></i></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p>Hoang Nhu Lan - 22130139</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+    
+</body>
+</html>

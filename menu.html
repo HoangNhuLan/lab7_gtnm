@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+Victory HTML CSS Template
+https://templatemo.com/tm-507-victory
+-->
+        <title>Làng ẩm thực</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">Làng ẩm thực</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="menu.html">Thực đơn</a></li>
+                        <li><a href="blog.html">Đánh giá</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Thực đơn của chúng tôi</h1>
+                    <p>Thông qua thực đơn, hãy chọn món mà các bán muốn thưởng thức nhé!</p>
+                </div>
+            </div>
+        </div>
+   
+    </section>
+    <div style="text-align: center; margin-top: 20px;">
+        <label style="color: orangered;" for="theme">Theme:</label>
+        <select id="theme">
+            <option class="light" value="light">Light</option>
+            <option class="dark" value="dark">Dark</option>
+        </select>
+    
+        <label style="color: orangered;" for="fontSize">Font Size:</label>
+        <select id="fontSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    
+        <button onclick="applySettings()">Apply Settings</button>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+        var fontSize = localStorage.getItem("fontSize");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        if (!fontSize) {
+            fontSize = "medium";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        document.getElementById("fontSize").value = fontSize;
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+        applyUIFontSize(fontSize);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+    function applyUIFontSize(fontSize) {
+        // You can implement logic to change the font size of the UI
+        // For example, update the CSS property of the body element
+        document.body.style.fontSize = fontSize;
+    }
+    
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        applyUITheme(theme);
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Theme applied:", "Theme:", theme);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+        </script>
+    </div>
+
+
+
+    <section class="breakfast-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="breakfast-menu-content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="left-image">
+                                    <img style="height: 34em;" src="img/pho.png" alt="Breakfast">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h2>Thực đơn bữa sáng</h2>
+                                <div id="owl-breakfast" class="owl-carousel owl-theme">
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img style="height: 11.5em;" src="img/pho.png" alt="">
+                                            <div class="price">35.000</div>
+                                            <div class="text-content">
+                                                <h4>Phở</h4>
+                                                <p>Tô phở thơm, đậm đà gia vị cùng miếng thịt bò tươi và bánh phở mềm, mỏng. Ăn kèm chút giá, đầu hành trụng, chanh và ớt </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img src="img/bunbo.png" alt="">
+                                            <div class="price">35.000</div>
+                                            <div class="text-content">
+                                                <h4>Bún bò huế</h4>
+                                                <p>Nước dùng được ninh từ xương ống bò nên có vị ngọt đậm đà, thêm chút mắm ruốc và sả để dậy mùi thơm nồng hấp dẫn.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img src="img/banhmibokho.png" alt="">
+                                            <div class="price">25.000</div>
+                                            <div class="text-content">
+                                                <h4>Bánh mì bò kho</h4>
+                                                <p>Thịt bò sẽ rất mềm mại, cùng với vị gân sẽ làm cho món bò kho vừa dai gân vừa ngọt thịt thêm ổ bánh mì đặc ruột.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="lunch-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="lunch-menu-content">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2>Thực đơn bữa trưa</h2>
+                                <div id="owl-lunch" class="owl-carousel owl-theme">
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img style="height: 12em;" src="img/com.png" alt="">
+                                            <div class="price">99.000</div>
+                                            <div class="text-content">
+                                                <h4>Cơm chiên hải sản</h4>
+                                                <p>Sự kết hợp của cơm và các loại hải sản tươi ngon cho ra một món ăn vô cùng hấp dẫn.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img src="img/thitkhotau.png" alt="">
+                                            <div class="price">70.000</div>
+                                            <div class="text-content">
+                                                <h4>Thịt kho tàu & cơm trắng</h4>
+                                                <p>Vị đặc biệt của thịt kho tàu từ nước dừa làm cho món thịt trở nên đậm đà.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img style="height: 12em;" src="img/mixaothapcam.png" alt="">
+                                            <div class="price">50.000</div>
+                                            <div class="text-content">
+                                                <h4>Mì xào thập cẩm</h4>
+                                                <p>Sợi mì dai ngon mà không hề bị bở nát thấm đều nước sốt đậm đà </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="left-image">
+                                    <img style="height: 33em;" src="img/com.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dinner-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="dinner-menu-content">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="left-image">
+                                    <img style="height: 32em;" src="img/comlam.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <h2>Thực đơn bữa tối</h2>
+                                <div id="owl-dinner" class="owl-carousel owl-theme">
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img style="height: 11.5em;" src="img/comlam.png" alt="">
+                                            <div class="price">325.000</div>
+                                            <div class="text-content">
+                                                <h4>Gà nướng cơm lam</h4>
+                                                <p>Thịt gà rất săn chắc, da mỏng, nướng giòn tan và ít mỡ nên lúc ăn sẽ không cảm thấy nhanh ngán.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img src="img/laucuadong.png" alt="">
+                                            <div class="price">250.000</div>
+                                            <div class="text-content">
+                                                <h4>Lẩu cua đồng</h4>
+                                                <p>Lẩu cua đồng mang vị ngọt thanh, béo ngậy từ rạch cua, nước dùng đậm đà, khó quên</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item col-md-12">
+                                        <div class="food-item">
+                                            <img style="height: 11.5em;" src="img/comnamkho.png" alt="">
+                                            <div class="price">290.000</div>
+                                            <div class="text-content">
+                                                <h4>Cơm nắm khô cá dứa</h4>
+                                                <p>Thú vị ở chỗ giòn giòn của lớp cơm cháy nhưng lại dẻo ở lớp bên trong.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="book-table">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Đặt bàn ngay bây giờ</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div class="left-image">
+                        <img src="img/book_left_image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-info">
+                        <h4>Đơn đặt chỗ</h4>
+                        <form id="form-submit" action="" method="get">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required name='day' onchange='this.form'>
+                                            <option value="">Chọn thứ</option>
+                                            <option value="Monday">Thứ hai</option>
+                                            <option value="Tuesday">Thứ ba</option>
+                                            <option value="Wednesday">Thứ tư</option>
+                                            <option value="Thursday">Thứ năm</option>
+                                            <option value="Friday">Thứ sáu</option>
+                                            <option value="Saturday">Thứ bảy</option>
+                                            <option value="Sunday">Chủ nhật</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required name='hour' onchange='this.form'>
+                                            <option value="">Chọn giờ</option>
+                                            <option value="10-00">10:00</option>
+                                            <option value="12-00">12:00</option>
+                                            <option value="14-00">14:00</option>
+                                            <option value="16-00">16:00</option>
+                                            <option value="18-00">18:00</option>
+                                            <option value="20-00">20:00</option>
+                                            <option value="22-00">22:00</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="name" type="name" class="form-control" id="name" placeholder="Họ và tên" required="">
+                                    </fieldset> 
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <input name="phone" type="phone" class="form-control" id="phone" placeholder="Số điện thoại" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <select required class="person" name='persons' onchange='this.form'>
+                                            <option value="">Số lượng người</option>
+                                            <option value="1-Person">1 người</option>
+                                            <option value="2-Persons">2 người</option>
+                                            <option value="3-Persons">3 người</option>
+                                            <option value="4-Persons">4 người</option>
+                                            <option value="5-Persons">5 người</option>
+                                            <option value="6-Persons">6 người</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="btn">Đặt bàn</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2023 GIAO TIEP NGUOI MAY</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons">
+                        <li><a rel="nofollow" href= https://www.facebook.com/bbyyshark.24><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://github.com/HoangNhuLan"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.instagram.com/ecihyav/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.google.com/intl/vi/gmail/about/"><i class="fa-solid fa-envelope"></i></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p>Hoang Nhu Lan - 22130139</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>	-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>

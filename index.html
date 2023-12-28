@@ -61,9 +61,9 @@ https://templatemo.com/tm-507-victory
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <h4>Ở nơi đây có thể giúp bạn tìm được món ăn ngon</h4>
-                    <h2>ẨM THỰC VIỆT NAM</h2>
-                    <p>Chào mừng bạn đến với website! Mong website này có thể giúp bạn lựa chọn món ăn một cách dễ dàng hơn!</p>
+                    <h4 class="animate-text">Ở nơi đây có thể giúp bạn tìm được món ăn ngon</h4>
+                    <h2 class="animate-text">ẨM THỰC VIỆT NAM</h2>
+                    <p class="animate-text">Chào mừng bạn đến với website! Mong website này có thể giúp bạn lựa chọn món ăn một cách dễ dàng hơn!</p>
                     <div class="primary-button">
                         <a href="#" class="scroll-link" data-id="book-table">Đặt bàn tại đây</a>
                     </div>
@@ -72,6 +72,127 @@ https://templatemo.com/tm-507-victory
             
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("section-loaded");
+        });
+    </script>
+    <div style="text-align: center; margin-top: 20px;">
+        <label style="color: orangered;" for="theme">Theme:</label>
+        <select id="theme">
+            <option class="light" value="light">Light</option>
+            <option class="dark" value="dark">Dark</option>
+        </select>
+    
+        <label style="color: orangered;" for="fontSize">Font Size:</label>
+        <select id="fontSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    
+        <button onclick="applySettings()">Apply Settings</button>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+        var fontSize = localStorage.getItem("fontSize");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        if (!fontSize) {
+            fontSize = "medium";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        document.getElementById("fontSize").value = fontSize;
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+        applyUIFontSize(fontSize);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+    function applyUIFontSize(fontSize) {
+        // You can implement logic to change the font size of the UI
+        // For example, update the CSS property of the body element
+        document.body.style.fontSize = fontSize;
+    }
+    
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        applyUITheme(theme);
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Theme applied:", "Theme:", theme);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+        </script>
+    </div>
 
     <div>
         <span style="color: orangered;" class="tooltip" data-tooltip="Mô tả ngắn về mục này">Hãy click vào để được hướng dẫn</span>
@@ -147,7 +268,7 @@ function scrollToID(id, speed) {
                     <div class="service-item">
                         <a href="menu.html">
                         <img style="height: 18em;" src="img/pho.png" alt="Breakfast">
-                        <h4>Bữa sáng</h4>
+                        <h4 class="animate-text">Bữa sáng</h4>
                         </a>
                     </div>
                 </div>
@@ -155,7 +276,7 @@ function scrollToID(id, speed) {
                     <div class="service-item">
                         <a href="menu.html">
                         <img style="height: 18em;" src="img/com.png" alt="Lunch">
-                        <h4>Bữa trưa</h4>
+                        <h4 class="animate-text">Bữa trưa</h4>
                         </a>
                     </div>
                 </div>
@@ -163,7 +284,7 @@ function scrollToID(id, speed) {
                     <div class="service-item">
                         <a href="menu.html">
                         <img style="height: 18em;" src="img/comlam.png" alt="Dinner">
-                        <h4>Bữa tối</h4>
+                        <h4 class="animate-text">Bữa tối</h4>
                         </a>
                     </div>
                 </div>
@@ -171,7 +292,7 @@ function scrollToID(id, speed) {
                     <div class="service-item">
                         <a href="menu.html">
                         <img style="height: 18em;" src="img/suongsaocotdua.png" alt="Desserts">
-                        <h4>Tráng miệng</h4>
+                        <h4 class="animate-text">Tráng miệng</h4>
                         </a>
                     </div>
                 </div>

@@ -132,6 +132,25 @@ p {
     margin: 0;
     border: none;
 }
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(7);
+    }
+}
+.animate-text {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards; /* Sử dụng forwards để giữ nguyên trạng thái cuối cùng của animation */
+}
+
+.section-loaded .animate-text {
+    animation-play-state: running;
+}
+
 .navbar-inverse .navbar-toggle {
 	margin-top: 22px;
     border-color: #f2745f;

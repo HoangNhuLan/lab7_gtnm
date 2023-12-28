@@ -62,12 +62,129 @@ https://templatemo.com/tm-507-victory
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Liên hệ với chúng tôi</h1>
-                    <p>Liên hệ với chúng tôi nếu bạn có lời nhắn hay góp ý cho quán</p>
+                    <h1 class="animate-text">Liên hệ với chúng tôi</h1>
+                    <p class="animate-text">Liên hệ với chúng tôi nếu bạn có lời nhắn hay góp ý cho quán</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <label style="color: orangered;" for="theme">Theme:</label>
+        <select id="theme">
+            <option class="light" value="light">Light</option>
+            <option class="dark" value="dark">Dark</option>
+        </select>
+    
+        <label style="color: orangered;" for="fontSize">Font Size:</label>
+        <select id="fontSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+    
+        <button onclick="applySettings()">Apply Settings</button>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+        var fontSize = localStorage.getItem("fontSize");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        if (!fontSize) {
+            fontSize = "medium";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        document.getElementById("fontSize").value = fontSize;
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+        var fontSize = document.getElementById("fontSize").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("fontSize", fontSize);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+        applyUIFontSize(fontSize);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Settings applied:", "Theme:", theme, "Font Size:", fontSize);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+    function applyUIFontSize(fontSize) {
+        // You can implement logic to change the font size of the UI
+        // For example, update the CSS property of the body element
+        document.body.style.fontSize = fontSize;
+    }
+    
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        // Load default settings from local storage (if available)
+        var theme = localStorage.getItem("theme");
+    
+        // Set default values if not found in local storage
+        if (!theme) {
+            theme = "light";
+        }
+    
+        // Apply default settings to the UI
+        document.getElementById("theme").value = theme;
+        applyUITheme(theme);
+    });
+    
+    function applySettings() {
+        // Get selected values from the UI
+        var theme = document.getElementById("theme").value;
+    
+        // Save settings to local storage
+        localStorage.setItem("theme", theme);
+    
+        // Apply settings to the UI or perform any other actions
+        applyUITheme(theme);
+    
+        // Log for demonstration purposes (you can remove this line)
+        console.log("Theme applied:", "Theme:", theme);
+    }
+    
+    function applyUITheme(theme) {
+        // You can implement logic to change the theme of the UI
+        // For example, update the CSS class of the body element
+        document.body.className = theme;
+    }
+    
+        </script>
+    </div>
 
 
 
@@ -104,7 +221,7 @@ https://templatemo.com/tm-507-victory
                 </div>
                 <div class="col-md-6">
                     <div class="section-heading contact-info">
-                        <h2>Thông tin liên lạc</h2>
+                        <h2 class="contact-information">Thông tin liên lạc</h2>
                         <p>Làng ẩm thực của chúng tôi có địa chỉ tại:<br><br><em>30 Abcdefgh <br> SĐT: 012345679</em></p>
                     </div>
                 </div>
